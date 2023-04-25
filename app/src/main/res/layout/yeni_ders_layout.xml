@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Spinner
+        android:id="@+id/spnHarfNotu"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:entries="@array/harfNotlari"
+        android:backgroundTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/spnKredi"
+        app:layout_constraintEnd_toEndOf="@+id/girilenDers"
+        app:layout_constraintStart_toEndOf="@+id/spnKredi" />
+
+    <AutoCompleteTextView
+        android:id="@+id/girilenDers"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        android:backgroundTint="@android:color/transparent"
+        android:popupBackground="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spnKredi"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:entries="@array/krediler"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/spnHarfNotu"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/girilenDers"
+        app:layout_constraintTop_toBottomOf="@+id/girilenDers" />
+
+    <Button
+        android:id="@+id/btnSil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/sub_btn"
+        android:backgroundTintMode="multiply"
+        app:layout_constraintBottom_toBottomOf="@+id/spnHarfNotu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/girilenDers" />
+
+</android.support.constraint.ConstraintLayout>

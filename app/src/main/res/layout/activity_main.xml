@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/genelLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Spinner
+            android:id="@+id/spinnerHarfNotu"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:entries="@array/harfNotlari"
+            android:backgroundTint="@color/white"
+            android:popupBackground="@android:color/transparent"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerKredi"
+            app:layout_constraintEnd_toEndOf="@+id/textEditDersGir"
+            app:layout_constraintStart_toEndOf="@+id/spinnerKredi" />
+
+        <AutoCompleteTextView
+            android:id="@+id/textEditDersGir"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:hint="Ders Gir"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@android:color/transparent"
+            android:popupBackground="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinnerKredi"
+            android:layout_width="125dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="24dp"
+            android:entries="@array/krediler"
+            android:backgroundTint="@color/white"
+            android:popupBackground="@android:color/transparent"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerHarfNotu"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/textEditDersGir"
+            app:layout_constraintTop_toBottomOf="@+id/textEditDersGir" />
+
+        <Button
+            android:id="@+id/btnEkle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/btnadd"
+            android:backgroundTintMode="screen"
+            app:layout_constraintBottom_toBottomOf="@+id/spinnerHarfNotu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textEditDersGir" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#DEF403"></View>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="400dp">
+
+        <LinearLayout
+            android:id="@+id/rootLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnHesapla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/teal_700"
+
+        android:text="Hesapla" />
+
+</LinearLayout>
